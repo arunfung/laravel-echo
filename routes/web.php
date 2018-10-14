@@ -12,7 +12,11 @@
 */
 
 Route::get('/', function () {
-    $order = \App\Models\Order::find(1);
-    event(new \App\Events\OrderUpdated($order));
     return view('welcome');
+});
+
+Route::get('/order', function () {
+    $order = \App\Models\Order::find(2);
+    event(new \App\Events\OrderUpdated($order));
+//    return view('welcome');
 });

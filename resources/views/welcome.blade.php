@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>Laravel</title>
 
         <!-- Fonts -->
@@ -79,8 +79,8 @@
                 </div>
             @endif
 
-            <div class="content">
-                <div class="title m-b-md">
+            <div class="content" id="app">
+                <div class="title m-b-md" id="title">
                     Laravel
                 </div>
 
@@ -94,5 +94,6 @@
                 </div>
             </div>
         </div>
+    <script src="/js/app.js"></script>
     </body>
 </html>
